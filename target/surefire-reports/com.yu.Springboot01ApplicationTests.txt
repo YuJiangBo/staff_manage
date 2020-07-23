@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.yu.Springboot01ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.426 s - in com.yu.Springboot01ApplicationTests

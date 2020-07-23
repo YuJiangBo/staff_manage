@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<div style="background-color: bisque">
+test： <h1 th:text="${name}"></h1>
+<h3 th:each="hobby:${hobby}" th:text="${hobby}"></h3>
+<h3 th:each="hobby:${hobby}">[[${hobby}]]</h3>
+</div>
+</body>
+</html>
