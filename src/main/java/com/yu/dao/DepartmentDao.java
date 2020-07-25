@@ -30,4 +30,8 @@ public class DepartmentDao {
         return departments.get(id);
     }
 
+//  修改
+    public void updateDepartment(Integer id,Department department){
+        department.setDepartmentName(departments.get(id).getDepartmentName());
+    }
 }

@@ -51,9 +51,9 @@
 				<!--nav-->
 				<div th:insert="~{commons/commons::sidebar(active='list.html')}"></div>
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-					<h2 class="d-inline-block">Staff Info</h2>
+					<h2 class="d-inline-block mx-5">Staff Info</h2>
 					<!--添加员工-->
-					<a th:href="@{/toadd}" class="d-inline btn btn-lg btn-success px-5 justify-content-end " style="margin-left: 300px">添加</a>
+					<a th:href="@{/emp}" class="d-inline btn btn-lg btn-success px-5 ml-5">添加</a>
 					<div class="table-responsive mt-3">
 						<table class="table table-striped table-sm">
 							<thead>
@@ -73,11 +73,11 @@
 									<td th:text="${emp.getLastName()}"></td>
 									<td th:text="${emp.getEmail()}"></td>
 									<td th:text="${emp.getGender()==0?'女':'男'}"></td>
-									<td th:text="${emp.getDepartment().getDepartmentName()}"></td>
+									<td th:text="${emp.department.getDepartmentName()}"></td>
 									<td th:text="${#dates.format(emp.getBirth(),'yyyy-MM-dd HH:mm:ss')}"></td>
 									<td>
-										<button class="btn btn-info px-2 py-0">编辑</button>
-										<button class="btn btn-danger px-2 py-0">删除</button>
+										<a th:href="@{/emp/}+${emp.getId()}" class="btn btn-info px-2 py-0">编辑</a>
+										<a th:href="@{/delemp/}+${emp.getId()}" class="btn btn-danger px-2 py-0">删除</a>
 									</td>
 								</tr>
 							</tbody>
