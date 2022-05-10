@@ -10,5 +10,6 @@ import lombok.NoArgsConstructor;
 public class Department {
 
     private Integer id;
+    //test
     private String departmentName;
 }
